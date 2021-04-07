@@ -2,7 +2,7 @@
 
 FROM ubuntu:20.04
 RUN apt-get update
-RUN apt-get install --no-install-recommends --yes wget unzip xvfb libxrender1 libxtst6 libxi6 libgtk2.0-bin 
+RUN apt-get install --no-install-recommends --yes wget unzip socat xvfb libxrender1 libxtst6 libxi6 libgtk2.0-bin 
 RUN apt-get clean
 
 # Install IB Gateway
@@ -36,7 +36,7 @@ RUN chmod a+x ./run.sh
 # Run Xvfb and IB Gateway
 
 ENV DISPLAY :1
-EXPOSE 4001
-EXPOSE 4002
+EXPOSE 4003
+EXPOSE 4004
 CMD ["/root/run.sh"]
 

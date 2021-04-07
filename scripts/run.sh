@@ -7,4 +7,10 @@ Xvfb :1 -ac -screen 0 1024x768x16 &
      "--tws-path=${TWS_PATH}" \
      "--ibc-path=${IBC_PATH}" "--ibc-ini=${IBC_INI}" \
      "--user=${TWSUSERID}" "--pw=${TWSPASSWORD}" "--mode=${TRADING_MODE}" \
-     "--on2fatimeout=${TWOFA_TIMEOUT_ACTION}"
+     "--on2fatimeout=${TWOFA_TIMEOUT_ACTION}" &
+
+sleep 30
+echo "Forking :::4001 onto 0.0.0.0:4003\n"
+socat TCP-LISTEN:4003,fork TCP:127.0.0.1:4001 &
+echo "Forking :::4002 onto 0.0.0.0:4004\n"
+socat TCP-LISTEN:4004,fork TCP:127.0.0.1:4002
