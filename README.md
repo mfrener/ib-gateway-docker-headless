@@ -4,7 +4,12 @@
 
 IB Gateway + IbcAlpha + Xvfb on a Docker Container.
 
-Run like:
+Get it:
+```
+docker pull docker.pkg.github.com/mfrener/ib-gateway-docker-headless/ib-gateway:latest
+```
+
+Run it:
 ```
 docker container run --env TWSUSERID='YOUR_IB_ACCOUNT' --env TWSPASSWORD="YOUR_IB_PASSWORD" --env TRADING_MODE=paper ib-gateway:latest
 ```
