@@ -1,5 +1,6 @@
 #!/bin/sh
 
+rm -f /tmp/.X1-lock
 Xvfb :1 -ac -screen 0 1024x768x16 &
 
 /opt/ibc/scripts/ibcstart.sh "${TWS_MAJOR_VRSN}" -g \
