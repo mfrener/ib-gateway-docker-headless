@@ -12,6 +12,11 @@ RUN wget https://download2.interactivebrokers.com/installers/tws/latest-standalo
 RUN chmod a+x tws-latest-standalone-linux-x64.sh
 RUN ./tws-latest-standalone-linux-x64.sh -q -dir /opt/Jts/981
 RUN rm ./tws-latest-standalone-linux-x64.sh
+ENV TWS_MAJOR_VRSN 981
+ENV TWS_PATH /opt/Jts
+ENV IBC_PATH /opt/ibc
+ENV IBC_INI /opt/ibc/config.ini
+ENV TWOFA_TIMEOUT_ACTION exit
 
 # Install IbcAlpha
 
