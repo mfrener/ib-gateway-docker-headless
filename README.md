@@ -1,3 +1,3 @@
-# ib-gateway-docker-headless
+# Outdated
 
-This repo is outdated, use https://github.com/waytrade/ib-gateway-docker instead
+Use https://github.com/waytrade/ib-gateway-docker instead
